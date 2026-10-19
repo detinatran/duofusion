@@ -1,0 +1,29 @@
+{
+ "n": 94,
+ "variants": 90,
+ "brain_ml_median": 44.694,
+ "defuse3": {
+  "n": 94,
+  "eligible_default": 19,
+  "any_flip": 16,
+  "unstable_10_90": 13
+ },
+ "core_range_ml": {
+  "median": 3.9025000000000003,
+  "q75": 6.47575
+ },
+ "core_iqr_ml": {
+  "median": 1.341,
+  "q75": 2.2665
+ },
+ "core_default_ml_median": 1.8610000000000002,
+ "truth": {
+  "n": 94,
+  "range_covers": 0.7021276595744681,
+  "iqr_covers": 0.24468085106382978,
+  "default_err_median_ml": -0.4904999999999998,
+  "default_abs_err_median_ml": 0.9964999999999999,
+  "truth_below_min": 0.0,
+  "truth_above_max": 0.2978723404255319
+ }
+}

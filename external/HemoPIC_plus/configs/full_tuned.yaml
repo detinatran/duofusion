@@ -1,0 +1,16 @@
+# Found by scripts/tune_optuna.py (Optuna TPE, 80 trials, mean lesion AUC on 29 tuning
+# patients; trial 78, the best on the tuning set). Test on 14 held-out patients:
+# docs/results/optuna/test.json. Same as full_aif_idvox_osvd_nc except the
+# tissue-mean input curve (no AIF), finer and more compact clusters, more temporal
+# smoothing, a weak F prior, a stronger V prior and a longer tail for the CBF level.
+name: full_tuned
+data: {data_root: ../HemoPIC/data/ISLES2017_Training, out_root: outputs}
+time: {dt_source: tr_table}
+model: {flow_per_minute: true, delay_dispersion: true, delay_bounds: [-4, 15],
+        lambda_f: 0.00547718, lambda_v: 0.200546, lambda_in: 0.0877526}
+robust: {multistart: 4, refit_loss: 0.15}
+partition: {k_gm: 16, k_wm: 6, coord_weight: 0.48988}
+signal: {smooth_sigma_frames: 2.64304, tail_frac: 0.383664}
+reference_free: {prior_source: tracer, cbv_texture: tracer_auc, map_bounds: fixed}
+arterial: {arterial_input: tissue_mean, prior_scale: wm_reference}
+cbv: {cbv_source: id_voxel, cbf_texture: osvd, cbf_texture_clip: false}

@@ -1,0 +1,5 @@
+# +C1 +C5 +C2: per-ROI bolus delay and dispersion of the arterial input
+name: c152_delay
+data: {data_root: ../HemoPIC/data/ISLES2017_Training, out_root: outputs}
+time: {dt_source: tr_table}
+model: {flow_per_minute: true, delay_dispersion: true}

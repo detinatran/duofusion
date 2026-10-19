@@ -1,0 +1,7 @@
+# Original HemoPIC (MICCAI 2026). Every option keeps its default, so this
+# config must reproduce the published pipeline exactly (see tests/).
+name: baseline
+
+data:
+  data_root: ../HemoPIC/data/ISLES2017_Training
+  out_root: outputs

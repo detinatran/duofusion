@@ -1,0 +1,26 @@
+{
+ "n": 149,
+ "variants": 90,
+ "brain_ml_median": 896.0600652812653,
+ "defuse3": {
+  "n": 149,
+  "eligible_default": 136,
+  "any_flip": 24,
+  "unstable_10_90": 20
+ },
+ "dawn": {
+  "n": 145,
+  "eligible_default": 50,
+  "any_flip": 37,
+  "unstable_10_90": 24
+ },
+ "core_range_ml": {
+  "median": 20.92,
+  "q75": 33.92
+ },
+ "core_iqr_ml": {
+  "median": 7.760000000000001,
+  "q75": 14.859307490314297
+ },
+ "core_default_ml_median": 9.421234844363475
+}

@@ -1,0 +1,7 @@
+# Original HemoPIC on the external ISLES'24 CT perfusion set (scripts/prepare_isles24.py).
+# Every option keeps its default (the published pipeline), so it reads the vendor maps as priors.
+name: isles24_baseline
+
+data:
+  data_root: ../data/ISLES2024_Training
+  out_root: outputs

@@ -1,0 +1,4 @@
+# baseline +C3 only: original model, but no silver-standard map inside the pipeline
+name: c3_reffree
+data: {data_root: ../HemoPIC/data/ISLES2017_Training, out_root: outputs}
+reference_free: {prior_source: tracer, cbv_texture: tracer_auc, map_bounds: fixed}

@@ -1,0 +1,51 @@
+{
+ "isles18": {
+  "n_slabs": 94,
+  "n_patients": 63,
+  "range": {
+   "coverage": 0.7021276595744681,
+   "width_ml_median": 3.9025
+  },
+  "residual": {
+   "coverage_80": 0.8127659574468085,
+   "width_ml_median_80": 4.157920559255805,
+   "coverage_90": 0.9196808510638298,
+   "width_ml_median_90": 7.00838177545045
+  },
+  "cqr": {
+   "coverage_80": 0.824468085106383,
+   "width_ml_median_80": 5.070164997277705,
+   "coverage_90": 0.9164893617021277,
+   "width_ml_median_90": 7.596674679353205
+  },
+  "residual_log1p": {
+   "median": 0.20116646609945432,
+   "q10": -0.39201739139299446,
+   "q90": 0.6423989312850301
+  }
+ },
+ "isles24": {
+  "n": 149,
+  "defuse3_eligible_default": 136,
+  "p_defuse3": {
+   "n": 149,
+   "certain_no": 8,
+   "uncertain": 28,
+   "certain_yes": 113
+  },
+  "p_dawn": {
+   "n": 145,
+   "certain_no": 83,
+   "uncertain": 24,
+   "certain_yes": 38
+  },
+  "core_default_median": 9.421234844363475,
+  "core_p50_median": 11.743422194382731,
+  "multiverse_unstable_defuse3": {
+   "n": 20,
+   "core_lt70_varies": 6,
+   "ratio_varies": 11,
+   "mismatch_ge15_varies": 12
+  }
+ }
+}

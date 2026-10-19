@@ -1,0 +1,12 @@
+# HemoPIC+ with a true arterial input: C1 + C5 + C2 + C4 + C3 + C6.
+# Automatic AIF (partial-volume corrected by the VOF) drives every ROI and gives
+# absolute indicator-dilution priors, so no white-matter calibration and no
+# deconvolution map is needed.
+name: full_aif_idvox_moment
+data: {data_root: ../HemoPIC/data/ISLES2017_Training, out_root: outputs}
+time: {dt_source: tr_table}
+model: {flow_per_minute: true, delay_dispersion: true, delay_bounds: [-4, 15]}
+robust: {multistart: 4, refit_loss: 0.15}
+reference_free: {prior_source: tracer, cbv_texture: tracer_auc, map_bounds: fixed}
+arterial: {arterial_input: auto_aif, prior_scale: absolute}
+cbv: {cbv_source: id_voxel, cbf_texture: moment}

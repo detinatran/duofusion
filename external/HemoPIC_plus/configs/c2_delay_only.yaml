@@ -1,0 +1,4 @@
+# baseline +C2 only (delay/dispersion on top of the original model)
+name: c2_delay_only
+data: {data_root: ../HemoPIC/data/ISLES2017_Training, out_root: outputs}
+model: {delay_dispersion: true}

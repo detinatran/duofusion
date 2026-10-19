@@ -1,0 +1,7 @@
+# HemoPIC+ with reference priors: C1 + C5 + C2 + C4 (directly comparable to the paper's setting)
+name: full_ref_ss
+data: {data_root: ../HemoPIC/data/ISLES2017_Training, out_root: outputs}
+time: {dt_source: tr_table}
+model: {flow_per_minute: true, delay_dispersion: true}
+windkessel: {wk_init: steady}
+robust: {multistart: 4, refit_loss: 0.15}

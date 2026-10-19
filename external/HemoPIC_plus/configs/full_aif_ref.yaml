@@ -1,0 +1,7 @@
+# full_ref + C6: true AIF, priors still from the reference maps (isolates the AIF effect)
+name: full_aif_ref
+data: {data_root: ../HemoPIC/data/ISLES2017_Training, out_root: outputs}
+time: {dt_source: tr_table}
+model: {flow_per_minute: true, delay_dispersion: true, delay_bounds: [-4, 15]}
+robust: {multistart: 4, refit_loss: 0.15}
+arterial: {arterial_input: auto_aif}

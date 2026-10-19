@@ -1,0 +1,9 @@
+# HemoPIC+ (reference-free): C1 + C5 + C2 + C4 + C3. No deconvolution map is read
+# for priors, textures or bounds, so the comparison against Deconv is independent.
+name: full_idvox_osvd_nc
+data: {data_root: ../HemoPIC/data/ISLES2017_Training, out_root: outputs}
+time: {dt_source: tr_table}
+model: {flow_per_minute: true, delay_dispersion: true}
+robust: {multistart: 4, refit_loss: 0.15}
+reference_free: {prior_source: tracer, cbv_texture: tracer_auc, map_bounds: fixed}
+cbv: {cbv_source: id_voxel, cbf_texture: osvd, cbf_texture_clip: false}

@@ -1,0 +1,4 @@
+# +C1: true per-subject TR (from DICOM acquisition times) instead of dt = 1 s
+name: c1_tr
+data: {data_root: ../HemoPIC/data/ISLES2017_Training, out_root: outputs}
+time: {dt_source: tr_table}

@@ -1,0 +1,9 @@
+# HemoPIC+ (full_aif) on the external ISLES'24 CT perfusion set (scripts/prepare_isles24.py).
+# Same settings as full_aif; the 1 s sampling interval is read from the CTP header.
+name: isles24_full_aif
+data: {data_root: ../data/ISLES2024_Training, out_root: outputs}
+time: {dt_source: header}
+model: {flow_per_minute: true, delay_dispersion: true, delay_bounds: [-4, 15]}
+robust: {multistart: 4, refit_loss: 0.15}
+reference_free: {prior_source: tracer, cbv_texture: tracer_auc, map_bounds: fixed}
+arterial: {arterial_input: auto_aif, prior_scale: absolute}
